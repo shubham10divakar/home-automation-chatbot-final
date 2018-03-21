@@ -414,5 +414,10 @@ public class ledControl extends ActionBarActivity {
             }
         }
     }
+    public void commandlist(View view)
+    {
+        Intent obj=new Intent(this,commandList.class);
+        startActivity(obj);
+    }
 
 }

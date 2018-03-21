@@ -249,15 +249,36 @@ public class MainActivity extends AppCompatActivity{
             i.addCategory(Intent.CATEGORY_LAUNCHER);
             startActivity(i);
         }
-        if (text.contains("home automation")||text.contains("home"))
+        if (text.contains("home automation")||text.contains("home")||text.contains("help"))
         {
+            speak("Sir, now you need to connect to bluetooth module to control home appliances but please switch on the bluetooth.");
             Intent obj=new Intent(this,DeviceList.class);
             startActivity(obj);
         }
-        if (text.contains("hi"))
+        if(text.contains("who created you"))
         {
-            speak("kungfu panda");
+            speak("I have been created by Subham Divakar");
         }
+        if(text.contains("team"))
+        {
+            speak("WORK IN A TEAM TO WIN");
+        }
+        if(text.contains("hi"))
+        {
+            speak("HI i am alice.I am feeling very happy talking to you.");
+        }
+    }
+    public void start(View view)
+    {
+        speak("now will have manually connect everything.");
+        Intent obj=new Intent(this,DeviceList.class);
+        startActivity(obj);
+    }
+    public void commandlist(View view)
+    {
+        speak("this is command list.you need to speak these commands to interact with me. ");
+        Intent obj=new Intent(this,commandList.class);
+        startActivity(obj);
     }
 }
 
