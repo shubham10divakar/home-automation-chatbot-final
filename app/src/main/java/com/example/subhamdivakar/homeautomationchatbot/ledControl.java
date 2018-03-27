@@ -57,7 +57,7 @@ import java.util.UUID;
 
 public class ledControl extends ActionBarActivity {
 
-    Button btnOn, btnOff, btnDis;
+    Button btnOn, btnOff, btnDis,btn1,btn2;
     SeekBar brightness;
     TextView lumn;
     String address = null;
@@ -94,9 +94,9 @@ public class ledControl extends ActionBarActivity {
         btnOn = (Button)findViewById(R.id.button2);
         btnOff = (Button)findViewById(R.id.button3);
         btnDis = (Button)findViewById(R.id.button4);
-        Button btn1,btn2;
+        //Button btn1,btn2;
         btn1=(Button)findViewById(R.id.button5);
-        btn2=(Button)findViewById(R.id.button5);
+        btn2=(Button)findViewById(R.id.button6);
         new ConnectBT().execute(); //Call the class to connect
 
         //commands to be sent to bluetooth
@@ -390,7 +390,7 @@ public class ledControl extends ActionBarActivity {
         {
             try
             {
-                btSocket.getOutputStream().write("0".toString().getBytes());
+                btSocket.getOutputStream().write("5".toString().getBytes());
             }
             catch (IOException e)
             {
@@ -405,7 +405,7 @@ public class ledControl extends ActionBarActivity {
         {
             try
             {
-                btSocket.getOutputStream().write("1".toString().getBytes());
+                btSocket.getOutputStream().write("6".toString().getBytes());
 
             }
             catch (IOException e)
