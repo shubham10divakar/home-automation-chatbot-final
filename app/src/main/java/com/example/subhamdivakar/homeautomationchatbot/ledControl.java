@@ -180,7 +180,6 @@ public class ledControl extends ActionBarActivity {
             { msg("Error");}
         }
         finish(); //return to the first layout
-
     }
 
     public void turnOffLed()
@@ -197,7 +196,6 @@ public class ledControl extends ActionBarActivity {
             }
         }
     }
-
     public void turnOnLed()
     {
         if (btSocket!=null)
@@ -390,7 +388,7 @@ public class ledControl extends ActionBarActivity {
         {
             try
             {
-                btSocket.getOutputStream().write("5".toString().getBytes());
+                btSocket.getOutputStream().write("6".toString().getBytes());
             }
             catch (IOException e)
             {
@@ -405,7 +403,7 @@ public class ledControl extends ActionBarActivity {
         {
             try
             {
-                btSocket.getOutputStream().write("6".toString().getBytes());
+                btSocket.getOutputStream().write("5".toString().getBytes());
 
             }
             catch (IOException e)
